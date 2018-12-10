@@ -55,7 +55,7 @@ int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_isspace(int c);
-int					ft_blank(int c);
+int					ft_isblank(int c);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);

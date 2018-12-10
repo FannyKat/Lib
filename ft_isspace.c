@@ -14,5 +14,5 @@
 
 int		ft_isspace(int c)
 {
-	return (ft_blank(c) || c == '\r' || c == '\v' || c == '\f');
+	return (ft_isblank(c) || c == '\r' || c == '\v' || c == '\f');
 }

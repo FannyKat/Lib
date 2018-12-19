@@ -12,23 +12,32 @@ SRCS		= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memchr.c\
 			ft_itoa.c ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c ft_putchar_fd.c\
 			ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_lstnew.c ft_lstdelone.c\
 			ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_memmove.c ft_memcmp.c\
-			ft_isblank.c ft_isspace.c ft_strrev.c ft_range.c ft_swap.c get_next_line.c\
+			ft_blank.c ft_isspace.c ft_strrev.c ft_range.c ft_swap.c\
 
 OBJ			= $(SRCS:.c=.o)
 
+LOG_CLEAR		= \033[2K
+LOG_UP			= \033[A
+LOG_NOCOLOR		= \033[0m
+LOG_YELLOW		= \033[1;33m
+LOG_VIOLET		= \033[1;35m
+LOG_BLUE		= \033[1;34m
+
 $(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
+	@ar rc $(NAME) $(OBJ)
 
 all: $(NAME)
 
 $(OBJ): $(SRCS)
-	gcc $(FLAGS) $(SRCS)
+	@gcc $(FLAGS) $(SRCS)
 
 clean:
-	rm -rf $(OBJ)
+	@echo -e "$(LOG_CLEAR)$(LOG_BLUE)clean obj$(LOG_NOCOLOR)"
+	@rm -rf $(OBJ)
 
 fclean: clean
-	rm -rf $(NAME)
+	@echo -e "$(LOG_CLEAR)$(LOG_BLUE)clean exe$(LOG_NOCOLOR)"
+	@rm -rf $(NAME)
 
 re: fclean all
 

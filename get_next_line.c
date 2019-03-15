@@ -6,11 +6,11 @@
 /*   By: fcatusse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/07 17:02:48 by fcatusse          #+#    #+#             */
-/*   Updated: 2018/12/07 19:54:14 by fcatusse         ###   ########.fr       */
+/*   Updated: 2019/03/15 13:23:40 by fcatusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 static int		check_error(int fd, char **line)
 {

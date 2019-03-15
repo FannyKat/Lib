@@ -6,7 +6,7 @@
 /*   By: fcatusse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 17:25:39 by fcatusse          #+#    #+#             */
-/*   Updated: 2018/11/15 11:47:41 by fcatusse         ###   ########.fr       */
+/*   Updated: 2019/03/15 13:25:14 by fcatusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ char	*ft_strtrim(char const *s)
 	if (!s)
 		return (NULL);
 	j = ft_strlen(s);
-	while (s[i] && ft_blank(s[i]))
+	while (s[i] && ft_isblank(s[i]))
 		i++;
 	if (i == j)
 		return (ft_strdup(""));
-	while (j > 0 && s[j - 1] && ft_blank(s[j - 1]))
+	while (j > 0 && s[j - 1] && ft_isblank(s[j - 1]))
 		j--;
 	cpy = ft_strsub(s, i, j - i);
 	if (!cpy)

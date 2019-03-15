@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   function.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcatusse <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 15:57:46 by fcatusse          #+#    #+#             */
-/*   Updated: 2019/03/15 13:24:35 by fcatusse         ###   ########.fr       */
+/*   Created: 2019/03/15 11:59:32 by fcatusse          #+#    #+#             */
+/*   Updated: 2019/03/15 13:03:28 by fcatusse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+void	fun_c(va_list *ap)
 {
-	if ((*alst)->next != NULL)
-		del((*alst)->next, (*alst)->size);
-	ft_lstdelone(alst, del);
+	ft_putchar(va_arg(*ap, int));
+}
+
+void	fun_s(va_list *ap)
+{
+	ft_putstr(va_arg(*ap, char*));
+}
+
+void	fun_d(va_list *ap)
+{
+	ft_putnbr(va_arg(*ap, int));
 }
